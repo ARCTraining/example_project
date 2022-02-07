@@ -16,6 +16,12 @@ conda create -n example_project -c conda-forge python==3.8.* jupyterlab jupyter-
 conda activate example_project
 ```    
 
+To recreate this environment from the conda file:
+
+```bash
+conda env create --file environment.yml
+```
+
 If want to use Jupyter Lab for development, then create a kernel for this environment:
 ```bash
 python -m ipykernel install --user --name example_project --display-name "example_project"
@@ -30,6 +36,8 @@ cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
 # fill in details
 cd example_project
 ```    
+
+Read the [templates documentation](http://drivendata.github.io/cookiecutter-data-science/) for more information.
 
 ### Project Organization
 
@@ -111,7 +119,20 @@ Can view the documentation locally by viewing the file `docs/_build/html/intro.h
 
 ## 6. Add code and data
 
-- Source code: [`src/`](https://github.com/ARCTraining/example_project/tree/main/src) 
+- Source code: [`src/`](https://github.com/ARCTraining/example_project/tree/main/src)  
+    For example:  
+    ```bash
+    (example_project)$ pwd
+    /home/lukeconibear/example_project
+    (example_project)$ python
+    Python 3.8.12 | packaged by conda-forge | (default, Jan 30 2022, 23:53:36)
+    [GCC 9.4.0] on linux
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> from src.data import make_dataset
+    >>> make_dataset
+    <module 'src.data.make_dataset' from '/home/lukeconibear/example_project/src/data/make_dataset.py'>
+    >>>
+    ```
 - Jupyter notebooks: [`notebooks/`](https://github.com/ARCTraining/example_project/tree/main/notebooks) 
 - Data: [`data/`](https://github.com/ARCTraining/example_project/tree/main/data)    
 
