@@ -2,32 +2,7 @@
 
 An example data science project to demonstrate GitHub.
 
-## 1. [Create a GitHub repository](https://docs.github.com/en/get-started/quickstart/create-a-repo)  
-
-- [Version control (Software Carpentry)](https://swcarpentry.github.io/git-novice/)
-- [Version control (The Alan Turing Institute)](https://alan-turing-institute.github.io/rse-course/html/module04_version_control_with_git/04_00_introduction.html)
-
-## 2. [Create a conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)  
-
-For example:
-
-```bash
-conda create -n example_project -c conda-forge python==3.8.* jupyterlab jupyter-book numpy cookiecutter pytest
-conda activate example_project
-```    
-
-To recreate this environment from the conda file:
-
-```bash
-conda env create --file environment.yml
-```
-
-If want to use Jupyter Lab for development, then create a kernel for this environment:
-```bash
-python -m ipykernel install --user --name example_project --display-name "example_project"
-```
-
-## 3. Create a structure for the project
+## 1. Create a structure for the project
 
 For example, using [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) and the [data science template](https://github.com/drivendata/cookiecutter-data-science):
 
@@ -86,8 +61,29 @@ Read the [templates documentation](http://drivendata.github.io/cookiecutter-data
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-## 4. [Initialise the repository](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line)
+## 2. [Create a conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)  
 
+For example:
+
+```bash
+conda create -n example_project -c conda-forge python==3.8.* jupyterlab jupyter-book numpy cookiecutter pytest
+conda activate example_project
+```    
+
+To recreate this environment from the conda file:
+
+```bash
+conda env create --file environment.yml
+```
+
+If want to use Jupyter Lab for development, then create a kernel for this environment:
+```bash
+python -m ipykernel install --user --name example_project --display-name "example_project"
+```
+
+## 3. [Create a GitHub repository](https://docs.github.com/en/get-started/quickstart/create-a-repo)  
+
+[Initialise the repository](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-an-existing-project-to-github-using-the-command-line). 
 For example:
 
 ```bash
@@ -99,7 +95,11 @@ git remote add origin git@github.com:username/example_project.git
 git push -u origin main
 ```    
 
-## 5. Create the [documentation](https://www.software.ac.uk/blog/2019-06-21-what-are-best-practices-research-software-documentation)
+More information:
+- [Version control (Software Carpentry)](https://swcarpentry.github.io/git-novice/)
+- [Version control (The Alan Turing Institute)](https://alan-turing-institute.github.io/rse-course/html/module04_version_control_with_git/04_00_introduction.html)
+
+## 4. Create the [documentation](https://www.software.ac.uk/blog/2019-06-21-what-are-best-practices-research-software-documentation)
 
 For example, using [Jupyter Book](https://jupyterbook.org/start/your-first-book.html):
 
@@ -117,7 +117,7 @@ git push
 
 Can view the documentation locally by viewing the file `docs/_build/html/intro.html` within a browser.
 
-## 6. Add code and data
+## 5. Add code and data
 
 - Source code: [`src/`](https://github.com/ARCTraining/example_project/tree/main/src)  
     For example:  
@@ -136,7 +136,7 @@ Can view the documentation locally by viewing the file `docs/_build/html/intro.h
 - Jupyter notebooks: [`notebooks/`](https://github.com/ARCTraining/example_project/tree/main/notebooks) 
 - Data: [`data/`](https://github.com/ARCTraining/example_project/tree/main/data)    
 
-## 7. Add [tests](https://alan-turing-institute.github.io/rse-course/html/module05_testing_your_code/05_00_introduction.html)
+## 6. Add [tests](https://alan-turing-institute.github.io/rse-course/html/module05_testing_your_code/05_00_introduction.html)
 
 For example, [`pytest`](https://docs.pytest.org/en/6.2.x/):
 
@@ -171,11 +171,11 @@ tests/test_example.py .                                                         
 ================================================= 1 passed in 0.02s =================================================
 ```
 
-## 8. Automate your workflow
+## 7. Automate your workflow
 
 For example, using [GitHub Actions](https://github.com/features/actions), see [`.github/workflows/deploy.yml`](https://github.com/ARCTraining/example_project/blob/main/.github/workflows/deploy.yml).
 
-## 9. [Capture your environment](https://the-turing-way.netlify.app/reproducible-research/renv.html)
+## 8. [Capture your environment](https://the-turing-way.netlify.app/reproducible-research/renv.html)
 
 For example, using [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment):
 
@@ -189,11 +189,11 @@ git commit -am "Adding conda environment"
 git push
 ```
 
-## 10. [Choose a software license](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
+## 9. [Choose a software license](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
 
 - Create/update the [`LICENSE`](https://github.com/ARCTraining/example_project/blob/main/LICENSE) file
 
-## 11. Update [README](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
+## 10. Update [README](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
 
 - Describe project
 - Steps to reproduce
@@ -201,7 +201,7 @@ git push
 - How to cite
 - How to contribute
 
-## 12. Publish online
+## 11. Publish online
 
 For example, using [GitHub Pages](https://pages.github.com/) (for a [Jupyter Book](https://jupyterbook.org/start/publish.html)):
 
@@ -209,7 +209,7 @@ For example, using [GitHub Pages](https://pages.github.com/) (for a [Jupyter Boo
 
 Now, viewable [here](https://arctraining.github.io/example_project/).
 
-## 13. [Release your project and make it citable](https://the-turing-way.netlify.app/communication/citable.html)
+## 12. [Release your project and make it citable](https://the-turing-way.netlify.app/communication/citable.html)
 
 - [Create the release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
     - e.g., [v0.0.1: Pre-release](https://github.com/ARCTraining/example_project/releases/tag/v0.0.1)
