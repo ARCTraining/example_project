@@ -107,11 +107,13 @@ git commit -am "Adding documentation"
 git push
 ```
 
+Can view the documentation locally by viewing the file `docs/_build/html/intro.html` within a browser.
+
 ## 6. Add code and data
 
-- Source code: `src`
-- Jupyter notebooks: `notebooks`
-- Data: `data`
+- Source code: [`src/`](https://github.com/ARCTraining/example_project/tree/main/src) 
+- Jupyter notebooks: [`notebooks/`](https://github.com/ARCTraining/example_project/tree/main/notebooks) 
+- Data: [`data/`](https://github.com/ARCTraining/example_project/tree/main/data)    
 
 ## 7. Add [tests](https://alan-turing-institute.github.io/rse-course/html/module05_testing_your_code/05_00_introduction.html)
 
@@ -121,7 +123,7 @@ For example, [`pytest`](https://docs.pytest.org/en/6.2.x/):
 mkdir tests
 ```
 
-Create files within `tests/` e.g., `test_example`:
+Create files within `tests/` e.g., `test_example.py`:
 
 ```python
 def increment_by_one(x):
@@ -168,7 +170,7 @@ git push
 
 ## 10. [Choose a software license](https://the-turing-way.netlify.app/reproducible-research/licensing.html)
 
-- Create/update the `LICENSE` file
+- Create/update the [`LICENSE`](https://github.com/ARCTraining/example_project/blob/main/LICENSE) file
 
 ## 11. Update [README](https://the-turing-way.netlify.app/project-design/project-repo/project-repo-readme.html)
 
@@ -182,7 +184,12 @@ git push
 
 For example, using [GitHub Pages](https://pages.github.com/) (for a [Jupyter Book](https://jupyterbook.org/start/publish.html)):
 
+- Settings > Pages > Source = `Branch: gh-pages`, Folder = `/docs`.
+
+Now, viewable [here](https://arctraining.github.io/example_project/).
+
 ## 13. [Release your project and make it citable](https://the-turing-way.netlify.app/communication/citable.html)
 
 - [Create the release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 - [Cite it](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) using [Zenodo](https://zenodo.org/)
+    - [Create](https://the-turing-way.netlify.app/communication/citable/citable-cff.html#) the [`CITATION.cff`](https://github.com/ARCTraining/example_project/blob/main/CITATION.cff) file

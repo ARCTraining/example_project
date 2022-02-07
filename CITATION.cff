@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+authors:
+- family-names: "Research Computing"
+title: "Example Project: An example data science project to demonstrate GitHub."
+version: 0.0.1
+identifiers:
+  - description: The concept DOI for the collection containing all versions of the Citation File Format.
+    type: doi
+    value: "..."
+license: "CC-BY-4.0"
+date-released: "2022-02-07"
+keywords:
+  - research practices
+  - data science
+  - reproducibility
+doi: ...
+references:
+  - type: book
+    authors:
+      - family-names: Research Computing
+        affiliation: "University of Leeds"
+        website: "https://arctraining.github.io/example_project/"
+    title: Example Project
