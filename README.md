@@ -184,12 +184,13 @@ git push
 
 For example, using [GitHub Pages](https://pages.github.com/) (for a [Jupyter Book](https://jupyterbook.org/start/publish.html)):
 
-- Settings > Pages > Source = `Branch: gh-pages`, Folder = `/docs`.
+- Settings > Pages > Source = `Branch: gh-pages`.
 
 Now, viewable [here](https://arctraining.github.io/example_project/).
 
 ## 13. [Release your project and make it citable](https://the-turing-way.netlify.app/communication/citable.html)
 
 - [Create the release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
+    - e.g., [v0.0.1: Pre-release](https://github.com/ARCTraining/example_project/releases/tag/v0.0.1)
 - [Cite it](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) using [Zenodo](https://zenodo.org/)
     - [Create](https://the-turing-way.netlify.app/communication/citable/citable-cff.html#) the [`CITATION.cff`](https://github.com/ARCTraining/example_project/blob/main/CITATION.cff) file
