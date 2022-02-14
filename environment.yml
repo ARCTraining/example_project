@@ -196,4 +196,3 @@ dependencies:
     - coverage==6.3.1
     - nbval==0.9.6
     - python-dotenv==0.19.2
-prefix: /home/lukeconibear/miniconda3/envs/example_project

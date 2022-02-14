@@ -2,7 +2,27 @@
 
 An example data science project to demonstrate GitHub.
 
-## 1. Create a structure for the project
+## 1. [Create a conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)  
+
+For example:
+
+```bash
+conda create -n example_project -c conda-forge python==3.8.* jupyterlab jupyter-book numpy cookiecutter pytest
+conda activate example_project
+```    
+
+To recreate this environment from the conda file:
+
+```bash
+conda env create --file environment.yml
+```
+
+If want to use Jupyter Lab for development, then create a kernel for this environment:
+```bash
+python -m ipykernel install --user --name example_project --display-name "example_project"
+```
+
+## 2. Create a structure for the project
 
 For example, using [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) and the [data science template](https://github.com/drivendata/cookiecutter-data-science):
 
@@ -60,26 +80,6 @@ Read the [templates documentation](http://drivendata.github.io/cookiecutter-data
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-## 2. [Create a conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)  
-
-For example:
-
-```bash
-conda create -n example_project -c conda-forge python==3.8.* jupyterlab jupyter-book numpy cookiecutter pytest
-conda activate example_project
-```    
-
-To recreate this environment from the conda file:
-
-```bash
-conda env create --file environment.yml
-```
-
-If want to use Jupyter Lab for development, then create a kernel for this environment:
-```bash
-python -m ipykernel install --user --name example_project --display-name "example_project"
-```
 
 ## 3. [Create a GitHub repository](https://docs.github.com/en/get-started/quickstart/create-a-repo)  
 
